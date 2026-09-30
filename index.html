@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client-Side Blog CMS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📝 Client-Side Blog CMS</h1>
+
+        <div class="cms-layout">
+
+            <section class="form-section">
+
+                <h2>Create / Edit Post</h2>
+
+                <input
+                    type="hidden"
+                    id="postId"
+                >
+
+                <label for="postTitle">Post Title</label>
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    placeholder="Enter post title"
+                >
+
+                <label for="postContent">Post Content</label>
+
+                <textarea
+                    id="postContent"
+                    placeholder="Write your blog post..."
+                ></textarea>
+
+                <label for="postStatus">Status</label>
+
+                <select id="postStatus">
+
+                    <option value="draft">
+                        Draft
+                    </option>
+
+                    <option value="published">
+                        Published
+                    </option>
+
+                </select>
+
+                <div class="form-buttons">
+
+                    <button
+                        type="button"
+                        id="saveBtn"
+                    >
+                        Save Post
+                    </button>
+
+                    <button
+                        type="button"
+                        id="clearBtn"
+                        class="secondary-btn"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section class="posts-section">
+
+                <div class="posts-header">
+
+                    <h2>My Posts</h2>
+
+                    <select id="filterStatus">
+
+                        <option value="all">
+                            All Posts
+                        </option>
+
+                        <option value="published">
+                            Published
+                        </option>
+
+                        <option value="draft">
+                            Drafts
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div id="postsContainer">
+
+                    <p class="empty-message">
+                        No posts available yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
